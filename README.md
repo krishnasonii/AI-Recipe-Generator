@@ -25,7 +25,7 @@ Environment Config: .env 📝
 
 Other Tools: CORS 🌐, Nodemon 🔄, Git 🐙
 1️⃣ Clone the repository
-git clone https://github.com/yourusername/recipe-generator.git
+git clone https://github.com/krishnasonii/AI-Recipe-Generator.git
 cd recipe-generator
 
 2️⃣ Backend Setup

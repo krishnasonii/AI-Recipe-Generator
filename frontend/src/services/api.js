@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 export const generateRecipe = (ingredients) =>
-  API.post("/recipe/generate", { ingredients });
+  API.post("/api/recipe/generate", { ingredients });

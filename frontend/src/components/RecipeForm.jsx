@@ -14,7 +14,6 @@ const RecipeForm = () => {
     setLoading(false);
   };
 
-  // 🔥 FORMAT RECIPE TEXT INTO UI SECTIONS
   const formatRecipe = (text) => {
     const lines = text.split("\n").filter(Boolean);
 
@@ -48,17 +47,16 @@ const RecipeForm = () => {
   return (
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-indigo-50 via-slate-50 to-purple-100 flex items-center px-4 py-10">
 
-      {/* 🎨 Decorative Blobs */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-24 right-[-140px] w-[460px] h-[460px] bg-indigo-400/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-16 right-[-100px] w-[380px] h-[380px] bg-purple-400/30 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 right-40 w-[220px] h-[220px] bg-pink-300/20 rounded-full blur-2xl"></div>
       </div>
 
-      {/* 🔷 MAIN CONTENT */}
+    
       <div className="relative z-10 w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT SECTION */}
+      
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 leading-tight">
             AI Recipe <span className="text-indigo-600">Generator</span>
@@ -86,7 +84,7 @@ const RecipeForm = () => {
             Example: jeera rice, onion, garlic
           </p>
 
-          {/* INPUT */}
+        
           <textarea
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
@@ -96,7 +94,7 @@ const RecipeForm = () => {
                        focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
           />
 
-          {/* BUTTON */}
+       
           <div className="mt-5">
             <button
               onClick={handleSubmit}
@@ -111,14 +109,13 @@ const RecipeForm = () => {
             </button>
           </div>
 
-          {/* 🍽️ OUTPUT UI */}
+   
           {recipe && (() => {
             const { title, ingredients, steps } = formatRecipe(recipe);
 
             return (
               <div className="mt-6 bg-white rounded-2xl border border-slate-200 shadow-md p-6 space-y-6 max-h-96 overflow-y-auto">
 
-                {/* TITLE */}
                <div className="flex items-center justify-between gap-3">
   <div className="flex items-center gap-2">
     <span className="text-2xl">🍽️</span>
@@ -138,7 +135,7 @@ const RecipeForm = () => {
 </div>
 
 
-                {/* INGREDIENTS */}
+             
                 {ingredients.length > 0 && (
                   <div>
                     <h4 className="text-lg font-semibold text-indigo-600 mb-2">
@@ -157,7 +154,6 @@ const RecipeForm = () => {
                   </div>
                 )}
 
-                {/* STEPS */}
                 {steps.length > 0 && (
                   <div>
                     <h4 className="text-lg font-semibold text-indigo-600 mb-2">
